@@ -27,17 +27,20 @@ const toggle = () =>{
              transform: click ? "rotate(-45deg) translateY(0)" : "rotate(0deg) translateY(6px)"
             }}
             
-            >&nbsp;</span>
+            >&nbsp;
+            </span>
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
             style={{
               opacity: click ? 0 : 1
              }}
-            >&nbsp;</span>
+            >&nbsp;
+            </span>
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
             style={{
               transform: click ? "rotate(45deg) translateY(0)" : "rotate(0deg) translateY(-6px)"
              }}
-            >&nbsp;</span>
+            >&nbsp;
+            </span>
             </div>
 
           </div>
