@@ -27,20 +27,17 @@ const toggle = () =>{
              transform: click ? "rotate(-45deg) translateY(0)" : "rotate(0deg) translateY(6px)"
             }}
             
-            >&nbsp;
-            </span>
+            >&nbsp;</span>
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
             style={{
               opacity: click ? 0 : 1
              }}
-            >&nbsp;
-            </span>
+            >&nbsp;</span>
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
             style={{
               transform: click ? "rotate(45deg) translateY(0)" : "rotate(0deg) translateY(-6px)"
              }}
-            >&nbsp;
-            </span>
+            >&nbsp;</span>
             </div>
 
           </div>
@@ -89,7 +86,7 @@ const toggle = () =>{
             <a href={siteMetadata.linkedin} className="inline-block w-6 h-6 mr-4" aria-label="Reach out to me via LinkedIn" target="_blank"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200" /></a>
             <a href={siteMetadata.twitter} className="inline-block w-6 h-6 mr-4" aria-label="Reach out to me via Twitter" target="_blank"><TwitterIcon className="hover:scale-125 transition-all ease duration-200" /></a>
             <a href={siteMetadata.github} className="inline-block w-6 h-6 mr-4" aria-label="Check my profile on Github" target="_blank"><GithubIcon className="  hover:scale-125 transition-all ease duration-200 dark:fill-light" /></a>
-            <a href={siteMetadata.dribbble} className="inline-block w-6 h-6 mr-4" aria-label="Check my profile on Dribbble" target="_blank"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200 cursor-pointer" /></a>
+            <a href={siteMetadata.dribbble} className="inline-block w-6 h-6 mr-4" aria-label="Check my profile on Dribbble" target="_blank"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200" /></a>
         </div>
     </header>
   )
