@@ -13,12 +13,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
   if (!blog) {
-    return {
-      title: "Blog Not Found",
-      description: "The requested blog was not found.",
-    };
+    return;
   }
-  
 
   const publishedAt = new Date(blog.publishedAt).toISOString();
   const modifiedAt = new Date(blog.updatedAt || blog.publishedAt).toISOString();
@@ -62,18 +58,14 @@ export async function generateMetadata({ params }) {
 
 export default function BlogPage({ params }) {
   const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
-  if (!blog) {
-    // Prikazati poruku o grešci ili preusmjeriti na 404 stranicu
-    return <div>Blog Not Found</div>;
+
+  let imageList = [siteMetadata.socialBanner];
+  if (blog.image) {
+    imageList =
+      typeof blog.image.filePath === "string"
+        ? [siteMetadata.siteUrl + blog.image.filePath.replace("../public", "")]
+        : blog.image;
   }
-  
-
-  const imageList = blog.image
-  ? typeof blog.image.filePath === "string"
-    ? [siteMetadata.siteUrl + blog.image.filePath.replace("../public", "")]
-    : blog.image
-  : [siteMetadata.socialBanner];
-
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -83,10 +75,11 @@ export default function BlogPage({ params }) {
     "image": imageList,
     "datePublished": new Date(blog.publishedAt).toISOString(),
     "dateModified": new Date(blog.updatedAt || blog.publishedAt).toISOString(),
-    "author": blog?.author ? 
-    [{ "@type": "Person", "name": blog.author, "url": siteMetadata.twitter }]
-     : [{ "@type": "Person", "name": siteMetadata.author, "url": siteMetadata.twitter }],
-
+    "author": [{
+        "@type": "Person",
+        "name": blog?.author ? [blog.author] : siteMetadata.author,
+        "url": siteMetadata.twitter,
+      }]
   }
 
   return (

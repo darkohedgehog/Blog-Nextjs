@@ -46,4 +46,4 @@ const HomeCoverSection = ({blogs}) => {
   )
 }
 
-export default HomeCoverSection
+export default HomeCoverSection;
