@@ -1,8 +1,7 @@
 // please update required information
 const siteMetadata = {
-    id: 0,
     title: 'Next.js Blog With Tailwind CSS and Contentlayer',
-    author: 'Hedgehog',
+    author: 'codebucks',
     headerTitle: 'Next.js Blog',
     description: 'A blog created with Next.js, Tailwind.css and contentlayer.',
     language: 'en-us',
