@@ -37,7 +37,7 @@ const HomeCoverSection = ({blogs}) => {
                 </span>
             </h1>
             </Link>
-            <p className='hidden sm:inline-block mt-4 md:text-lg lg:text-xl font-in'>
+            <p className='hidden  sm:inline-block mt-4 md:text-lg lg:text-xl font-in'>
                 {blog.description}
             </p>
         </div>
@@ -46,4 +46,4 @@ const HomeCoverSection = ({blogs}) => {
   )
 }
 
-export default HomeCoverSection;
+export default HomeCoverSection

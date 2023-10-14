@@ -1,7 +1,7 @@
 "use client"
-import React from 'react';
-import { useMDXComponent } from 'next-contentlayer/hooks';
-import Image from 'next/image';
+import React from 'react'
+import { useMDXComponent } from 'next-contentlayer/hooks'
+import Image from 'next/image'
 
 
 const mdxComponents = {
@@ -29,7 +29,11 @@ const RenderMdx = ({blog}) => {
     dark:prose-li:marker:text-accentDark
 
     first-letter:text-3xl
-    sm:first-letter:text-5xl'> 
+    sm:first-letter:text-5xl
+    
+
+
+    '> 
         <MDXContent components={mdxComponents}/>
     </div>
   )
